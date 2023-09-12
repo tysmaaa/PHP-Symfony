@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BienvenueController!{% endblock %}
+
+{% block body %}
+
+<h1>Bienvenue aux personnes</h1>
+
+{%  for personne in personnes %}
+    <ul>
+        <li>{{ personne }}</li>
+    </ul>
+
+{% endfor %}
+
+{% endblock %}
