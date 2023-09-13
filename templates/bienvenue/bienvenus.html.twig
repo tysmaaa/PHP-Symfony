@@ -6,11 +6,11 @@
 
 <h1>Bienvenue aux personnes</h1>
 
-{%  for personne in personnes %}
     <ul>
-        <li>{{ personne }}</li>
+{%  for personne in personnes %}
+    <a href="{{ path('app_bienvenue_prenom', {'prenom': personne}) }}">{{ personne }}</a></li>
+{% endfor %}
     </ul>
 
-{% endfor %}
 
 {% endblock %}

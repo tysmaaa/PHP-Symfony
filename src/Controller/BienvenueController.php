@@ -12,11 +12,13 @@ class BienvenueController  extends AbstractController
     public function index(): Response
     {
         // Appel à la vue
+        $prenom = "carton";
         return $this->render('bienvenue/index.html.twig', [
+            'prenom' => $prenom
         ]);
     }
 
-    #[Route('/bienvenue/{prenom}', name: 'app_bienvenue')]
+    #[Route('/bienvenue/{prenom}', name: 'app_bienvenue_prenom')]
     public function bienvenuePrenom(string $prenom): Response
     {
         // Appel "simulé" au model
@@ -28,14 +30,15 @@ class BienvenueController  extends AbstractController
         ]);
     }
 
-    #[Route('/bienvenues/{prenom}', name: 'app_bienvenues')]
+    #[Route('/bienvenues', name: 'app_bienvenues')]
     public function bienvenues(): Response
     {
         // Appel 'simulé' au model
-        $personnes = ["kayo", "omen", "sage", "jet"];
+        $personnes = ["kayo", "omen", "sage", "jett", "killjoy", "yoru"];
         // Appel à la vue
-        return $this->render('/bienvenue/bienvenues.html.twig', [
+        return $this->render('bienvenue/bienvenus.html.twig', [
             'personnes' => $personnes
         ]);
     }
 }
+

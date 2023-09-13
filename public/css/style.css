@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri;
+}
+
+h1 {
+    color: forestgreen;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+ul li {
+    text-align: center;
+    margin: 2rem;
+    display: inline-block;
+    font-size: 1.8rem;
+
+}
+p {
+text-align: center;
+    font-size: 1.6rem;
+}
+
+.footer {
+    padding: 2rem;
+    background-color: grey;
+    color: white;
+}

@@ -4,15 +4,15 @@
 
 {% block body %}
 
-<p>Bienvenue {{ prenom | capitalize }} dans le cours Symfony</p>
+<h1>Bienvenue {{ prenom | capitalize }} dans le cours Symfony</h1>
 
 
-    {# Tester si le prénom commnce par la letrre j #}
+{#     Tester si le prénom commnce par la letrre j#}
 
-{#    {% if prenom | first == 'j' %}#}
-{#    <p>Votre prénom commence par la lettre J</p>#}
-{#    {% else %}#}
-{#    <p>Votre blaze ne commence pas par J</p>#}
-{#{% endif %}#}
+    {% if prenom | first == 'j' %}
+    <p>Votre prénom commence par la lettre J</p>
+    {% else %}
+    <p>Votre blaze ne commence pas par J</p>
+{% endif %}
 
 {% endblock %}
