@@ -15,10 +15,8 @@ h1 {
     margin-bottom: 5rem;
 }
 ul li {
-    text-align: center;
     margin: 2rem;
-    display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1rem;
 
 }
 p {
