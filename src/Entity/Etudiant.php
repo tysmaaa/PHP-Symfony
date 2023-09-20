@@ -26,6 +26,9 @@ class Etudiant
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateNaissance = null;
 
+    #[ORM\ManyToOne(inversedBy: 'etudiants')]
+    private ?promotion $promotion = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -83,5 +86,17 @@ class Etudiant
         $datejour = new \DateTime();
         $interval = $this->dateNaissance->diff($datejour);
             return $interval->y;
+    }
+
+    public function getPromotion(): ?promotion
+    {
+        return $this->promotion;
+    }
+
+    public function setPromotion(?promotion $promotion): static
+    {
+        $this->promotion = $promotion;
+
+        return $this;
     }
 }
